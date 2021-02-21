@@ -6,13 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/btnDragShadow"
+        android:layout_width="150dp"
+        android:layout_height="42dp"
+        android:text="Drag Shadow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnDragView"/>
+
+    <Button
+        android:id="@+id/btnDragView"
+        android:layout_width="150dp"
+        android:layout_height="42dp"
+        android:text="Drag View"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnDragShadow"
+        app:layout_constraintBottom_toTopOf="@id/btnDragViewToDelete"/>
+
+    <Button
+        android:id="@+id/btnDragViewToDelete"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="42dp"
+        android:text="Drag View to Delete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnDragView"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
